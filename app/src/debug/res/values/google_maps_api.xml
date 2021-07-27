@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=C4:5F:F3:22:19:6F:8B:99:4D:0D:70:24:C8:32:C9:CE:6D:E8:C9:E0%3Bcom.example.coronaway
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.example.coronaway
+
+    SHA-1 certificate fingerprint:
+    C4:5F:F3:22:19:6F:8B:99:4D:0D:70:24:C8:32:C9:CE:6D:E8:C9:E0
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAjykycZlkPrgmKldTIYqkm4XERpy7V-VM</string>
+</resources>
