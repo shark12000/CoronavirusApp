@@ -10,5 +10,5 @@ data class Info(
         val lastCheckTimeText: String,
 
         @SerializedName("china")
-        val data: Data
+        val china: Data
 )

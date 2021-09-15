@@ -1,19 +1,19 @@
 package com.example.coronaway.data.room.entities
 
-import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.coronaway.utils.models.Data
 
 @Entity(tableName = "info")
 data class InfoEntity (
-        @PrimaryKey(autoGenerate = true) val infoId: Long?,
-
+        @PrimaryKey
         @ColumnInfo(name = "lastCheckTimeMilli")
-        val lastCheckTimeMilli: Long?,
+        val lastCheckTimeMilli: Long,
 
         @ColumnInfo(name = "lastCheckTimeText")
-        val lastCheckTimeText: String?,
+        val lastCheckTimeText: String,
 
-    )  {
-}
+        @ColumnInfo(name = "china")
+        val data: Data
+    )

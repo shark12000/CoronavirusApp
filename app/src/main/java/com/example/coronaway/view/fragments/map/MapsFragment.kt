@@ -23,19 +23,19 @@ class MapsFragment : Fragment() {
     private lateinit var binding: FragmentMapsBinding
 
     private val callback = OnMapReadyCallback { googleMap ->
-        viewModel.information.observe(viewLifecycleOwner, {lan ->
-               val arr = lan.data?.get(0)?.data?.data!!
-                for(country in arr) {
-                    googleMap.addCircle(
-                        CircleOptions()
-                            .center(LatLng(country.lat.toDouble(), country.exLong.toDouble()))
-                            .fillColor(Color.argb(70, 150, 50, 50))
-                            .strokeColor(Color.RED)
-                            .strokeWidth(3f)
-                            .radius(country.confirmed.toDouble()/30.0)
-                    )
-                }
-        })
+        viewModel.information.observe(viewLifecycleOwner) { lan ->
+            val arr = lan.data?.china?.countries!!
+            for (country in arr) {
+                googleMap.addCircle(
+                    CircleOptions()
+                        .center(LatLng(country.lat.toDouble(), country.exLong.toDouble()))
+                        .fillColor(Color.argb(70, 150, 50, 50))
+                        .strokeColor(Color.RED)
+                        .strokeWidth(3f)
+                        .radius(country.confirmed.toDouble() / 30.0)
+                )
+            }
+        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.coronaway.databinding.FragmentDashboardBinding
 import com.example.coronaway.view.fragments.InfoViewModel
@@ -36,12 +35,12 @@ class DashboardFragment : Fragment() {
             }
         }
 
-        viewModel.information.observe(viewLifecycleOwner, Observer {
-            binding.totalCasesText.text = it.data?.get(0)?.data?.totalConfirmed.toString()
-            binding.lastUpdateText.text = it.data?.get(0)?.info?.lastCheckTimeText
-            binding.totalDeathText.text = it.data?.get(0)?.data?.totalDeaths.toString()
-            binding.totalRecoveredText.text = it.data?.get(0)?.data?.totalRecovered.toString()
-            it.data?.get(0)?.let { it1 -> adapter.setList(it1.data.countries) }
+        viewModel.information.observe(viewLifecycleOwner, {
+            binding.totalCasesText.text = it.data?.china?.totalConfirmed?.toString()
+            binding.lastUpdateText.text = it.data?.lastCheckTimeText
+            binding.totalDeathText.text = it.data?.china?.totalDeaths.toString()
+            binding.totalRecoveredText.text = it.data?.china?.totalRecovered?.toString()
+            it.data?.china?.let { it1 -> adapter.setList(it1.countries) }
         })
 
     }
