@@ -1,8 +1,8 @@
-package com.example.coronaway.utils
+package com.example.coronaway.data.storage
 
 import androidx.room.TypeConverter
-import com.example.coronaway.utils.models.Country
-import com.example.coronaway.utils.models.Data
+import com.example.coronaway.data.api.models.Country
+import com.example.coronaway.data.api.models.Data
 import com.google.gson.Gson
 
 class Converters {

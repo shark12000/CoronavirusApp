@@ -1,13 +1,12 @@
-package com.example.coronaway.data.room.entities
+package com.example.coronaway.data.storage.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.coronaway.utils.models.Country
+import com.example.coronaway.data.api.models.Country
 
 @Entity(tableName = "data")
 data class DataEntity(
-        @PrimaryKey(autoGenerate = true) val dataId: Long?,
-
+        @PrimaryKey
         @ColumnInfo(name = "totalConfirmed")
         val totalConfirmed: Long?,
 
@@ -16,8 +15,4 @@ data class DataEntity(
 
         @ColumnInfo(name = "totalRecovered")
         val totalRecovered: Long?,
-
-        @ColumnInfo(name = "countries")
-        val country:  List<Country>?
-)  {
-}
+)

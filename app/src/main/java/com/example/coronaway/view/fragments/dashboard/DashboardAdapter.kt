@@ -4,14 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.coronaway.databinding.LayoutListitemBinding
-import com.example.coronaway.utils.models.Country
+import com.example.coronaway.view.models.Country
 
 class DashboardAdapter(private var list: MutableList<Country> = mutableListOf()) : RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder>(){
 
     inner class DashboardViewHolder(private val binding: LayoutListitemBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(country: Country) {
-            binding.CountryText.text = country.country
+            binding.CountryText.text = country.name
             binding.totalCasesPerCountryText.text = country.confirmed.toString()
         }
     }
