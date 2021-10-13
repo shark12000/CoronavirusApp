@@ -14,7 +14,6 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class DashboardFragment : Fragment() {
-
     private val viewModel: InfoViewModel by activityViewModels()
     private lateinit var binding: FragmentDashboardBinding
     private val adapter: DashboardAdapter = DashboardAdapter()
@@ -28,12 +27,6 @@ class DashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupAdapter()
-
-        binding.apply {
-            recyclerView.apply {
-                setupAdapter()
-            }
-        }
 
         viewModel.data.observe(viewLifecycleOwner, {
             binding.totalCasesText.text = it.data.totalConfirmed.toString()
