@@ -1,15 +1,16 @@
-package com.example.coronaway.utils.models
+package com.example.coronaway.view.models
 
+import androidx.room.ColumnInfo
 import com.google.gson.annotations.SerializedName
 
-data class Country(
-        @SerializedName("country")
-        val country: String,
+data class Country (
+        @SerializedName("name")
+        val name: String,
 
         @SerializedName("lat")
         val lat: Float,
 
-        @SerializedName("long")
+        @SerializedName("exLong")
         val exLong: Float,
 
         @SerializedName("confirmed")
@@ -20,4 +21,4 @@ data class Country(
 
         @SerializedName("recovered")
         val recovered: Long,
-    )
+)

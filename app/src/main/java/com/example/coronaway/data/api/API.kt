@@ -1,6 +1,6 @@
 package com.example.coronaway.data.api
 
-import com.example.coronaway.utils.models.Info
+import com.example.coronaway.data.api.models.Info
 import retrofit2.http.GET
 import retrofit2.http.Headers
 

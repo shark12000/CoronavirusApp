@@ -1,4 +1,4 @@
-package com.example.coronaway.utils.models
+package com.example.coronaway.view.models
 
 import com.google.gson.annotations.SerializedName
 
@@ -11,7 +11,4 @@ data class Data(
 
     @SerializedName("totalRecovered")
     val totalRecovered: Long,
-
-    @SerializedName("data")
-    val countries: List<Country>
 )

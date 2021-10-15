@@ -1,4 +1,4 @@
-package com.example.coronaway.utils.models
+package com.example.coronaway.data.api.models
 
 import com.google.gson.annotations.SerializedName
 

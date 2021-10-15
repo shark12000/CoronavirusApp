@@ -3,7 +3,7 @@ package com.example.coronaway.di
 import android.app.Application
 import androidx.room.Room
 import com.example.coronaway.data.api.API
-import com.example.coronaway.data.room.CoronavirusRoomDatabase
+import com.example.coronaway.data.storage.CoronavirusRoomDatabase
 import com.example.coronaway.utils.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides

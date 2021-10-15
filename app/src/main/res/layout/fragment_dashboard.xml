@@ -14,7 +14,7 @@
         android:layout_height="18dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/roboto_light"
-        android:text="6000"
+        android:text="@string/_6000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,16 +52,17 @@
         android:layout_height="21dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/roboto_light"
-        android:text="TextView"
+        android:text="@string/stats"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="20dp" />
+        app:layout_constraintVertical_bias="0.02"
+        tools:layout_editor_absoluteX="22dp" />
 
     <TextView
         android:id="@+id/totalDeathText"
         android:layout_width="60dp"
         android:layout_height="20dp"
         android:layout_marginTop="28dp"
-        android:text="TextView"
         android:fontFamily="@font/roboto_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
@@ -73,7 +74,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="TextView"
         android:fontFamily="@font/roboto_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.691"
